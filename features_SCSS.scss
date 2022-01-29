@@ -1,0 +1,21 @@
+
+// mixin for adaptive font-size and convert px to rem
+@mixin fontsz($f1, $f2, $f3) {
+    font-size: ($f1*1rem/16);
+    @media (max-width:992px) {
+        font-size: ($f2*1rem/16);
+    }
+    @media (max-width:767px) {
+        font-size: ($f3*1rem/16);
+    }
+}
+
+// mixin for adaptive CSSpropertive and convert px to rem
+@mixin property_media($property, $v1, $v2, $v3) {
+    #{$property}: ($v1*1rem/16);
+    @media (max-width:992px) {
+        #{$property}: ($v2*1rem/16);
+    }
+    @media (max-width:767px) {
+        #{$property}: ($v3*1rem/16);
+    }}
